@@ -10,10 +10,14 @@ connectDB();
 //cors 
 
 const corsOptions = {
-    origin: process.env.ALLOWED_CLIENTS.split(',')
+    // origin: process.env.ALLOWED_CLIENTS.split(',')
+    "origin": "*",
+    "methods": "GET,HEAD,PUT,PATCH,POST,DELETE",
+    "preflightContinue": false,
+    "optionsSuccessStatus": 204
 
 }
-console.log(corsOptions.origin);
+// console.log(corsOptions.origin);
 
 app.use(cors(corsOptions));
 
