@@ -19,8 +19,8 @@ let upload = multer({ storage, limits:{ fileSize: 1000000 * 100 }, }).single('my
 
 router.post('/', (req, res) => {
     upload(req, res, async (err) => {
-        // console.log("request");
-        // console.log(req.file);
+        console.log("request");
+        console.log(req.file);
         if(!req.file){
             return res.json({error: "all fields are required"});
             
