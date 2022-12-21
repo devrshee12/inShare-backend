@@ -1,6 +1,6 @@
 const express = require("express") 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3030;
 const connectDB = require("./config/db");
 const path = require("path");
 const cors = require("cors");
@@ -15,7 +15,6 @@ const corsOptions = {
     "methods": "GET,HEAD,PUT,PATCH,POST,DELETE",
     "preflightContinue": false,
     "optionsSuccessStatus": 204
-
 }
 // console.log(corsOptions.origin);
 
